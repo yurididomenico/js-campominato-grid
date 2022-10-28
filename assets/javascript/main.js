@@ -10,11 +10,9 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 function gioco()
 {
-    console.log("Funzione: gioco()")
-
     // Definisco variabile area di gioco
     let griglia = document.getElementById('areaGioco');
-    console.log(griglia);
+    griglia.innerHTML = "";
 
     // Definisco variabile per il quadrato
     let quadrato;
@@ -43,8 +41,6 @@ function gioco()
 
     
 }
-
-
 
 //Funzione genera un div
 function creaQuad()

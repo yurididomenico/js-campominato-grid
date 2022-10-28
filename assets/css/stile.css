@@ -22,7 +22,7 @@ a
 .containerAreaGioco
 {
   margin: 0 auto;
-  width: 40%;
+  width: 35%;
 }
 
 .gridBox
@@ -38,13 +38,22 @@ a
   background-color: lightblue;
 }
 
+body
+{
+  background-image: url('../img/bg-bomb.png');
+  background-size: 2%;
+  background-color: grey;
+}
 
 
 
 
 
 /* |||||||||| HEADER |||||||||| */
-
+header
+{
+  height: 10vh;
+}
 
 
 /* |||||||||| NAV |||||||||| */
@@ -52,12 +61,18 @@ a
 
 
 /* |||||||||| MAIN |||||||||| */
-
+main
+{
+  height: 85vh;
+}
 
 
 /* |||||||||| FOOTER |||||||||| */
-
-
+footer
+{
+  height: 5vh;
+  background-color: lightgrey;
+}
 
 /* |||||||||| AREA TEST |||||||||| */
 
