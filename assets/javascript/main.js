@@ -12,12 +12,49 @@ function gioco()
 {
     console.log("Funzione: gioco()")
 
+    // Definisco variabile area di gioco
+    let griglia = document.getElementById('areaGioco');
+    console.log(griglia);
+
+    // Definisco variabile per il quadrato
+    let quadrato;
+    
+    //creazione 100 div - con evento click
+    for(let i=0; i<100; i++)
+    {
+        quadrato = creaQuad();
+        // console.log(quadrato);
+
+        //Inserisco il numero nel quadrato
+        quadrato.innerText = i+1;
+        quadrato.classList.add('d-flex');
+        quadrato.classList.add('justify-content-center');
+        quadrato.classList.add('align-items-center');
+
+        //Attivo i quadrati
+        quadrato.addEventListener('click', function()
+        {
+            console.log(i+1);
+            this.classList.toggle('active');
+        })
+
+        griglia.append(quadrato);
+    }
 
     
 }
 
 
 
+//Funzione genera un div
+function creaQuad()
+{
+    // Creo un elemento "Div"
+    let div = document.createElement('div');
+    // Aggiungo la classe "gridBox"
+    div.classList.add('gridBox');
+    return div;
+}
 
 
 
