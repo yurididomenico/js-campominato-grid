@@ -78,9 +78,22 @@ function creaQuad()
     let div = document.createElement('div');
     // Aggiungo la classe "gridBox"
     div.classList.add('gridBox');
+    if(numDifficolta == 100)
+    {
+        div.classList.add('gridBoxWidthEasy');
+    }
+    else if(numDifficolta == 81)
+    {
+        div.classList.add('gridBoxWidthNormal');
+    }
+    if(numDifficolta == 49)
+    {
+        div.classList.add('gridBoxWidthHard');
+    }
+
+
     return div;
 }
-
 
 
 

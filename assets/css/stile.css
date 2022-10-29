@@ -27,10 +27,25 @@ a
 
 .gridBox
 {
-  width: calc(100% / 10);
   aspect-ratio: 1/1;
   border: 1px solid black;
   background-color: lightgrey;
+}
+
+/*larghezza per 100 quadrati*/
+.gridBoxWidthEasy
+{
+  width: calc(100% / 10);
+}
+/*larghezza per 81 quadrati*/
+.gridBoxWidthNormal
+{
+  width: calc(100% / 9);
+}
+/*larghezza per 49 quadrati*/
+.gridBoxWidthHard
+{
+  width: calc(100% / 7);
 }
 
 .active
