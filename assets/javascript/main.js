@@ -10,42 +10,52 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 // Definisco variabile difficoltà
 let selezioneDifficolta = document.getElementById('selezioneDifficolta');
+
 //Definisco variabile per la difficoltà (for)
 let numDifficolta;
 
+// Definisco variabile area di gioco
+let griglia = document.getElementById('areaGioco');
 
 
+// Definisco variabile per il quadrato
+let quadrato;
+
+//Definisco variabile reset in caso di valore nullo sulla select della difficoltà
+let selezioneDifficoltaVuota = document.getElementById('selezioneDifficoltaVuota');
 
 
 
 function gioco()
 {
     //Controllo quale opzione viene scelta
-    if(selezioneDifficolta.value == "")
-    {
-        alert("Selezionare una difficoltà.");
-        refresh();
-    }
-    else if(selezioneDifficolta.value == 1)
+    if(selezioneDifficolta.value == 1)
     {
         numDifficolta = 100;
+        griglia.innerHTML = "";
     }
     else if(selezioneDifficolta.value == 2)
     {
         numDifficolta = 81;
+        griglia.innerHTML = "";
     }
     else if(selezioneDifficolta.value == 3)
     {
         numDifficolta = 49;
+        griglia.innerHTML = "";
+    }
+    else
+    {
+        // alert("Selezionare una difficoltà.");
+        griglia.innerHTML = "Selezionare una difficoltà.";
+        numDifficolta = 0;
     }
 
-    // Definisco variabile area di gioco
-    let griglia = document.getElementById('areaGioco');
-    griglia.innerHTML = "";
+    selezioneDifficoltaVuota.addEventListener('click', function()
+    {
+        refresh();
+    })
 
-    // Definisco variabile per il quadrato
-    let quadrato;
-    
     //creazione 100 div - con evento click
     for(let i=0; i<numDifficolta; i++)
     {
@@ -94,7 +104,6 @@ function creaQuad()
 
     return div;
 }
-
 
 
 

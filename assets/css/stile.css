@@ -61,7 +61,7 @@ main
 
 .active
 {
-  background-color: lightblue;
+  background-color: lightblue !important;
 }
 
 .containerAreaGioco
