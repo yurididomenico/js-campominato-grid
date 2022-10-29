@@ -8,12 +8,37 @@ Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 */
 
+// Definisco variabile difficoltà
+let selezioneDifficolta = document.getElementById('selezioneDifficolta');
+//Definisco variabile per la difficoltà (for)
+let numDifficolta;
+
+
 
 
 
 
 function gioco()
 {
+    //Controllo quale opzione viene scelta
+    if(selezioneDifficolta.value == "")
+    {
+        alert("Selezionare una difficoltà.");
+        refresh();
+    }
+    else if(selezioneDifficolta.value == 1)
+    {
+        numDifficolta = 100;
+    }
+    else if(selezioneDifficolta.value == 2)
+    {
+        numDifficolta = 81;
+    }
+    else if(selezioneDifficolta.value == 3)
+    {
+        numDifficolta = 49;
+    }
+
     // Definisco variabile area di gioco
     let griglia = document.getElementById('areaGioco');
     griglia.innerHTML = "";
@@ -22,7 +47,7 @@ function gioco()
     let quadrato;
     
     //creazione 100 div - con evento click
-    for(let i=0; i<100; i++)
+    for(let i=0; i<numDifficolta; i++)
     {
         quadrato = creaQuad();
         // console.log(quadrato);
