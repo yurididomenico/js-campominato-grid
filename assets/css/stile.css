@@ -40,9 +40,9 @@ a
 
 body
 {
-  background-image: url('../img/bg-bomb.png');
-  background-size: 2%;
-  background-color: grey;
+  /* background-image: url('../img/bg-bomb.png');
+  background-size: 2%; */
+  background-color: rgb(193, 193, 193);
 }
 
 
